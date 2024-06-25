@@ -43,21 +43,21 @@ button3.onclick = fightDragon;
 
 
 function update(location) {
-button1.innerText = "Go to store";
-  button2.innerText = "Go to cave"; //changes the display of the buttons
-  button3.innerText = "Fight dragon";
+    button1.innerText = "Go to store";
+    button2.innerText = "Go to cave"; //changes the display of the buttons
+    button3.innerText = "Fight dragon";
 
-  button1.onclick = goStore;
-  button2.onclick = goCave; // calls the corresponding function when one button is clicked
-  button3.onclick = fightDragon;
+    button1.onclick = goStore;
+    button2.onclick = goCave; // calls the corresponding function when one button is clicked
+     button3.onclick = fightDragon;
 
-  text.innerText = "You are in the town square. You see a sign that says \"Store\"." // changes the display of the text
+    text.innerText = "You are in the town square. You see a sign that says \"Store\"." // changes the display of the text
 }
 
 
 function goTown() {
-
-}
+    update(locations[0]);
+  }
 
 
 

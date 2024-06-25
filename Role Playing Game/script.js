@@ -31,7 +31,13 @@ const locations = [
       "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
       "button functions": [buyHealth, buyWeapon, goTown],
       text: "You enter the store."
-    }
+    },
+    {
+        name: "cave",
+        "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+        "button functions": [fightSlime, fightBeast, goTown],
+        text: "You enter the cave. You see some monsters."
+      }
 ];
 
 
@@ -43,31 +49,37 @@ button3.onclick = fightDragon;
 
 
 function update(location) {
-    button1.innerText = "Go to store";
-    button2.innerText = "Go to cave"; //changes the display of the buttons
-    button3.innerText = "Fight dragon";
+    button1.innerText = location["button text"][0];
+    button2.innerText = location["button text"][1]; // changes the dislay of the buttons
+    button3.innerText = location["button text"][2];
 
-    button1.onclick = goStore;
-    button2.onclick = goCave; // calls the corresponding function when one button is clicked
-     button3.onclick = fightDragon;
+    button1.onclick = location["button functions"][0];
+    button2.onclick = location["button functions"][1]; // calls the corresponding function when button is clicked
+    button3.onclick = location["button functions"][2];
 
-    text.innerText = "You are in the town square. You see a sign that says \"Store\"." // changes the display of the text
+    text.innerText = location.text; // changes the display of the text
 }
 
 
 function goTown() {
     update(locations[0]);
-  }
-
+}
 
 
 function goStore() {
-
+    update(locations[1]);
 }
 
 
 function goCave() {
-    console.log("Going to cave.")
+    update(locations[2]);
+}
+
+function fightSlime() {
+
+}
+function fightBeast() {
+  
 }
 
 

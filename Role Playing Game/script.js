@@ -39,37 +39,30 @@ const locations = [
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
+// clicking on the Go to store button will call the goStore function etc.
 
 
 function update(location) {
+button1.innerText = "Go to store";
+  button2.innerText = "Go to cave"; //changes the display of the buttons
+  button3.innerText = "Fight dragon";
 
+  button1.onclick = goStore;
+  button2.onclick = goCave; // calls the corresponding function when one button is clicked
+  button3.onclick = fightDragon;
+
+  text.innerText = "You are in the town square. You see a sign that says \"Store\"." // changes the display of the text
 }
 
 
 function goTown() {
-button1.innerText = "Go to store";
-  button2.innerText = "Go to cave";
-  button3.innerText = "Fight dragon";
 
-  button1.onclick = goStore;
-  button2.onclick = goCave;
-  button3.onclick = fightDragon;
-
-  text.innerText = "You are in the town square. You see a sign that says \"Store\".";
 }
 
 
-// clicking on the Go to store button will call the goStore function
+
 function goStore() {
-    button1.innerText = "Buy 10 health (10 gold)"; 
-    button2.innerText = "Buy weapon (30 gold)";     //changes the display of the buttons
-    button3.innerText = "Go to town square"; 
 
-    button1.onclick = buyHealth; 
-    button2.onclick = buyWeapon; // calls the corresponding function when one button is clicked
-    button3.onclick = goTown; 
-
-    text.innerText = "You enter the store."; // changes the display of the text
 }
 
 
